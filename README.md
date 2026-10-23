@@ -1,10 +1,10 @@
 # iLab-X 学习页布局修复脚本
 
-一个优化北航计算机组成课程10空间平台页面显示的油猴脚本
+> 适用于北航计组BUAA CO相关课程。
 
-> 使用**GLM 5.3**模型进行开发，仅供学习参考，任何后果与开发者无关。
+一个优化北航计算机组成课程10空间平台页面显示的油猴脚本，使用**GLM 5.3**模型进行开发，仅供学习参考，任何后果与开发者无关。
 
-适配 **ilab-x（实验空间 / 高教社 heep-portal）** 的「资源学习」页面，例如：
+本脚本适配 **ilab-x（实验空间 / 高教社 heep-portal）** 的「资源学习」页面，例如：
 
 ```
 https://10.ilab-x.com/heep-portal/hep-front/#/resource-learn?courseId=4494&courseName=计算机组成
@@ -14,7 +14,7 @@ https://10.ilab-x.com/heep-portal/hep-front/#/resource-learn?courseId=4494&cours
 
 ---
 
-## 一、要解决的问题
+## 一、解决问题
 
 ### 问题 1：正文下方巨大的空白白框，遮挡/顶飞「下一个」按钮
 
