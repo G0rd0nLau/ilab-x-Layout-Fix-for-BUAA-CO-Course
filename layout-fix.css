@@ -1,0 +1,74 @@
+/* =====================================================================
+   iLab-X 学习页布局修复 —— 纯 CSS 版（Stylus / Stylebot 备用方案）
+   适用：*://*.ilab-x.com/* 下的「资源学习」页（#/resource-learn）
+   与油猴脚本 ilab-x-layout-fix.user.js 内容等价，二选一安装即可。
+   ===================================================================== */
+
+/* ---------- 1. 内容区高度自适应（消灭底部巨大白框） ---------- */
+.class-learn-sum-info .right-content-info > div,
+.class-learn-sum-info .other-class,
+.class-learn-sum-info .medium-box,
+.class-learn-sum-info .rich-text-out,
+.class-learn-sum-info .rich-text-info {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+.class-learn-sum-info .right-content-info {
+    flex: 1 1 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+/* ---------- 2. 「上一个 / 下一个」按钮栏常驻可视区底部 ---------- */
+.class-learn-sum-info .right-content-info > .right-content-title-info:last-child {
+    position: sticky !important;
+    bottom: 0 !important;
+    z-index: 20 !important;
+    background: #ffffff !important;
+    border-top: 0.5px solid #e2e2e2 !important;
+    flex-shrink: 0 !important;
+}
+
+/* ---------- 3. 窄窗口 / 竖屏 / 分屏适配 ---------- */
+.class-learn-sum-info {
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+}
+
+.class-learn-sum-info .class-learn-info,
+.class-learn-sum-info .class-learn-small-info {
+    min-width: 0 !important;
+}
+
+.class-learn-sum-info .class-learn-left-info {
+    width: clamp(180px, 32vw, 400px) !important;
+    flex: 0 0 auto !important;
+}
+
+.class-learn-sum-info .class-learn-left-small-info {
+    flex: 0 0 auto !important;
+}
+
+.class-learn-sum-info .class-learn-right-info,
+.class-learn-sum-info .class-learn-right-small-info {
+    width: auto !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+}
+
+@media (max-width: 700px) {
+    .class-learn-sum-info .class-learn-left-info {
+        width: 34vw !important;
+    }
+}
+
+/* ---------- 4. 细节修补 ---------- */
+.class-learn-sum-info .right-content-title-next-info {
+    min-width: 0 !important;
+}
+
+.class-learn-sum-info .right-content-title-next-info > div:first-child {
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
